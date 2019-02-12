@@ -1,0 +1,34 @@
+<import src="post-item/post-item-template.wxml" />
+<view>
+  <swiper vertical='{{false}}' indicator-dots="true" autoplay="true" interval="2000" indicator-color="#cccccc" indicator-active-color="#29a1f7" class="swiper-box">  
+   <block wx:for="{{advert}}" wx:for-item="item">  
+    <swiper-item>  
+     <image src="{{img}}{{item.picture_url}}"></image>  
+    </swiper-item>  
+   </block>  
+  </swiper>
+ 
+  <!--动态公告  -->
+   <swiper class="swiper_container notice-icon-title" vertical="true" autoplay="true" circular="true" interval="2000" >
+   <image class="notice-icon" src="/images/icon4.png"></image>
+     <block wx:for="{{notice}}">
+         <swiper-item>
+           <view class="swiper_item">{{item.content}}</view>
+         </swiper-item>
+     </block>
+   </swiper>
+  <!-- <view class="notice-icon-title">
+    <image class="notice-icon" src="/images/icon4.png"></image>
+    <text class="notice-title">【最新公告】老年人舞蹈班开始报名啦，现在火热</text>
+  </view> -->
+ <!--列表  -->
+  <view class="aside-left" id="xzContent">
+    
+  
+  <block wx:for="{{center}}" wx:for-item="item" >
+    <view catchtap="gocenter" data-postId="{{item.id}}">
+              <template is="postItem" data="{{...item}}"/>
+    </view>
+  </block>
+  </view>
+</view>

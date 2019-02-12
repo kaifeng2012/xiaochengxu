@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+      <image style="" src="/images/1.jpg"></image>
+<text class="title"><text style="color:red;"> Hello</text>  七月</text>
+<view class="classname" bindtap="onTap">
+<text class="content">开启小程序之旅</text>  
+</view>
+</view>

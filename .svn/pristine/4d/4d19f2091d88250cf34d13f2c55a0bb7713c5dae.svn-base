@@ -1,0 +1,63 @@
+<!-- map.wxml -->
+<view>
+    <map id="1" longitude="{{center.longitude}}" latitude="{{center.latitude}}" scale="14"  bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;" title="1111">
+
+<cover-view bindtap="backClick">
+<cover-image src="/images/back.png" class="back">
+<!-- <image class="back" src="/images/back.png"></image> -->
+</cover-image>
+</cover-view>
+    </map>
+
+
+ <view class="aside-left" id="xzContent">
+  <view class="line">
+
+                     <view class="homeInfo">
+                        <view class="blueBg">
+                          <image src="/images/juxing.png" class="bg"></image>
+                          <text class="title"> {{center.center_name}}</text>
+                           
+                        </view>
+
+                         <view class="address">
+                            <view class="leftPic"><image src="{{img}}{{center.imgurl}}"></image></view>
+                             <view class="aside-right">
+                                <view class="addressInfo" >
+                                    <image src="/images/icon0.png" ></image>
+                                    <text>{{center.center_address}}</text>
+                                    <!-- <text class="cutLine" style=""></text> -->
+                                </view>
+                                 <view class="yunying" >
+                                    <image src="/images/icon2.png"></image>
+                                    <text>{{center.center_callphone}}</text>
+                                </view> 
+                                <view class="distance">
+                                    <image src="/images/icon1.png"></image>
+                                    <text>{{center.juli}}</text>
+                                </view>
+
+
+                         </view>  
+                        </view>
+                        </view> 
+              
+     
+  </view> 
+  <view class="dialing" catchtap="callphone" data-phone="{{center.center_callphone}}">
+      <text>拨打电话</text>
+  </view>
+  <!-- <view class="public-num" catchtap="attention" data-attention="{{center.center_mp}}">
+      <text>关注公众号</text>
+  </view> -->
+  </view>
+  <!-- <view class="opening-time">
+    <text class="opening">开放时间：周一至周日 <text class="time">10:00-17:00</text></text>
+  </view> -->
+  <view class="llCenter-Info-title">
+    <text class="llCenter-title">邻里中心介绍</text>
+    <view class="llCenter-Info">
+        <text>{{center.content}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+/**app.wxss**/
+text{
+   font-family: "microsoft yahei",SimHei,SimSun , Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,10 @@
+//index.js
+Page({
+  onTap:function(event){
+    //console.log('onTap')
+    wx.navigateTo({
+      url: '../llCenter/llCenter'
+    })
+  }
+ 
+})

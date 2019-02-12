@@ -1,0 +1,32 @@
+<template name="postItem">
+     <view class="line">
+    <text class="juli">距离</text>
+             <image src="/images/1.png"  class="dateIcon"></image>
+             <text class="" style="margin-left:-71px;position:relative;top:10px;">{{jl}}</text> 
+                   
+                     <view class="homeInfo">
+                        <view class="blueBg">
+                          <image src="/images/bg.png" class="bg"></image>
+                          <text class="title"> {{centerName}}</text>
+                           
+                        </view>
+
+                         <view class="address">
+                            <view class="leftPic"><image src="{{img}}{{centerImgurl}}"></image></view>
+                             <view class="aside-right">
+                                <view class="addressInfo" >
+                                    <image src="/images/icon0.png" ></image>
+                                    <text>{{centerAddress}}</text>
+                                    <text class="cutLine" style=""></text>
+                                </view>
+                                <view class="yunying" >
+                                    <image src="/images/icon2.png"></image>
+                                    <text>{{centerCallnumber}}</text>
+                                </view>
+
+
+                         </view>  
+                        </view>
+                        </view> 
+    </view> 
+</template>
